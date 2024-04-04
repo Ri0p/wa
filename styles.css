@@ -42,8 +42,9 @@ main {
 
 .watch-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   flex-wrap: wrap; 
 }
 
 .watch {
@@ -54,12 +55,12 @@ main {
 }
 
 .watch img {
-    width: 100%;
+    width: 200px;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
