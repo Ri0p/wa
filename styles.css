@@ -30,7 +30,7 @@ nav ul li a {
 
 main {
     display: grid;
-    grid-template-columns: 2 , 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
 }
