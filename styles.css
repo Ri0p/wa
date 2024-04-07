@@ -104,7 +104,7 @@ footer {
     background-color: #555;
 }
 
-/* Media Query за да го прикажете хамбургер менито на мали екрани */
+
 @media screen and (max-width: 768px) {
     #hamburger-checkbox {
         display: none; 
