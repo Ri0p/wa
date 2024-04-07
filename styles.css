@@ -1,21 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
 
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+}
+
+
+nav {
+    background-color: #333;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
 }
 
 nav ul li {
@@ -23,47 +23,142 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
+    display: block;
     padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
 }
 
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li + li {
+    margin-left: 20px;
+}
+
+
+
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
     padding: 20px;
 }
 
 .watches-section {
-    border: 1px solid #ccc;
-    padding: 20px;
+    margin-bottom: 40px;
 }
 
 .watch-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-   flex-wrap: wrap; 
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .watch {
-    width: 45%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    width: 200px;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .watch img {
-    width: 200px;
+    max-width: 100%;
 }
 
+/* Footer styles */
 footer {
     background-color: #333;
-    color: #ffffff;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-   /* position: fixed; */
-    bottom: 0;
-    width: 100%;
 }
+/* Hamburger menu  */
+.hamburger-menu {
+    display: none; 
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+/* Media Query за да го прикажете хамбургер менито на мали екрани */
+@media screen and (max-width: 768px) {
+    #hamburger-checkbox {
+        display: none; 
+    }
+
+    .hamburger-menu {
+        display: block; 
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+    }
+
+    .menu {
+        display: none; 
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    #hamburger-checkbox:checked + .menu {
+        display: block; 
+    }
+}
+
+/* Media Queries */
+/* Мал екран мобилен телефон*/
+@media screen and (max-width: 576px) {
+    .watch {
+        width: 100%;
+    }
+}
+
+/* Среден екран таблет */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .watch {
+        width: 45%;
+    }
+}
+
+/* Голем екран монитор */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .watch {
+        width: 30%;
+    }
+}
+
+/* Најголем екран XL монитор */
+@media screen and (min-width: 1201px) {
+    .watch {
+        width: 20%;
+    }
+}
+
+
